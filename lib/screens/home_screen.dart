@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:quake_flutter/screens/quake_bag.dart';
+import 'package:quake_flutter/utilities/constants.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -47,7 +48,7 @@ class HomeScreen extends StatelessWidget {
       _buildLastQuakes(context),
       Container(
         height: 100,
-        color: Colors.blue,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.blue),
         alignment: Alignment.center,
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
@@ -59,7 +60,7 @@ class HomeScreen extends StatelessWidget {
       ),
       Container(
         height: 100,
-        color: Colors.orange,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.orange),
         alignment: Alignment.center,
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
@@ -71,7 +72,7 @@ class HomeScreen extends StatelessWidget {
       ),
       Container(
         height: 100,
-        color: Colors.purple,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.purple),
         alignment: Alignment.center,
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
@@ -83,7 +84,7 @@ class HomeScreen extends StatelessWidget {
       ),
       Container(
         height: 100,
-        color: Colors.cyan,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.cyan),
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
         alignment: Alignment.center,
@@ -99,7 +100,7 @@ class HomeScreen extends StatelessWidget {
   _buildLastQuakes(BuildContext context){
     return       Container(
       height: 100,
-      color: Colors.teal,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.teal),
       alignment: Alignment.center,
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(10),
@@ -123,9 +124,8 @@ _buildBagRequired(BuildContext context){
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
         height: 100,
-        color: Colors.amber,
         alignment: Alignment.center,
-        //decoration: kBoxDecorationStyle,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),color: Colors.amber),
         child: Text(
           "Deprem Çantası",
           style: TextStyle(fontSize: 18),
