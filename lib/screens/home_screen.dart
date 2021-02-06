@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:quake_flutter/screens/quake_bag.dart';
 import 'package:quake_flutter/utilities/constants.dart';
 
 class HomeScreen extends StatelessWidget {
+  GoogleMapController _googleMapController;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -14,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           pinned: true,
           snap: false,
           flexibleSpace: FlexibleSpaceBar(
-            title: Text("Deprem App"),
+            title: Text('Deprem App'),
             centerTitle: true,
             /*  background: Image.asset(
               "assets/images/image.jpg",
@@ -29,6 +31,7 @@ class HomeScreen extends StatelessWidget {
               SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           delegate: SliverChildListDelegate(sabitListeElemanlari(context)),
         ),
+
       ],
     );
   }
@@ -40,8 +43,8 @@ class HomeScreen extends StatelessWidget {
       _buildLastQuakes(context),
       _buildThirdContainer(context),
       _buildForthContainer(context),
-      _buildFifthContainer(context),
-      _buildSixthContainer(context),
+   //   _buildFifthContainer(context),
+    //  _buildSixthContainer(context),
     ];
   }
 
@@ -95,7 +98,7 @@ class HomeScreen extends StatelessWidget {
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(10),
       child: Text(
-        "Sabit Liste Elemanı 3",
+        "Afet Sonrası Toplanma Alanları",
         style: TextStyle(fontSize: 18),
         textAlign: TextAlign.center,
       ),
@@ -111,7 +114,7 @@ class HomeScreen extends StatelessWidget {
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(10),
       child: Text(
-        "Sabit Liste Elemanı 4",
+        "Bina Durumu",
         style: TextStyle(fontSize: 18),
         textAlign: TextAlign.center,
       ),

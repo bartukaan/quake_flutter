@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andorid="http://schemas.android.com/apk/distribution"
     package="com.bartukaanpideci.quake.quake_flutter">
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -43,5 +44,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data
+            andorid:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyALQWzHVgQasUJPBzEn9Kih4WiKEC0HR2o" />
     </application>
 </manifest>
