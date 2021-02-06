@@ -8,6 +8,10 @@ class BuildingStatus extends StatefulWidget {
 class _BuildingStatusState extends State<BuildingStatus> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Bina Durumu'),
+      ),
+    );
   }
 }

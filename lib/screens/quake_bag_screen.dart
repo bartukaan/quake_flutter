@@ -8,6 +8,10 @@ class QuakeBag extends StatefulWidget {
 class _QuakeBagState extends State<QuakeBag> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Deprem Çantam'),
+      ),
+    );
   }
 }

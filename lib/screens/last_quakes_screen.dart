@@ -8,6 +8,10 @@ class LastQuakes extends StatefulWidget {
 class _LastQuakesState extends State<LastQuakes> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Son Depremler'),
+      ),
+    );;
   }
 }

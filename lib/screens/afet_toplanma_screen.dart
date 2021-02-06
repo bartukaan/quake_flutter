@@ -8,6 +8,10 @@ class AfetToplanma extends StatefulWidget {
 class _AfetToplanmaState extends State<AfetToplanma> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Afet Sonrası Toplanma Alanları'),
+      ),
+    );
   }
 }
