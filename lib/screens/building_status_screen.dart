@@ -29,6 +29,7 @@ class _BuildingStatusState extends State<BuildingStatus> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Bina Durumu'),),
       body: Column(
         children: <Widget>[
           Expanded(flex: 4, child: _buildQrView(context)),
