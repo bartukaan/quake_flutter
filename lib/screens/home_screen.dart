@@ -79,15 +79,16 @@ class HomeScreen extends StatelessWidget {
     ];
   }
 
-   _buildAfetToplanma(BuildContext context) {
+  _buildAfetToplanma(BuildContext context) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => AfetToplanma()));
       },
       child: Container(
         height: 100,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
           color: Colors.green,
         ),
         alignment: Alignment.center,
@@ -115,15 +116,16 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-   _buildBuildingStatus(BuildContext context) {
+  _buildBuildingStatus(BuildContext context) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => BuildingStatus()));
       },
       child: Container(
         height: 100,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
           color: Colors.purple,
         ),
         alignment: Alignment.center,
@@ -153,13 +155,14 @@ class HomeScreen extends StatelessWidget {
 
   _buildLastQuakes(BuildContext context) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => LastQuakes()));
       },
       child: Container(
         height: 100,
-        decoration: BoxDecoration(color: Colors.redAccent),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30), color: Colors.redAccent),
         alignment: Alignment.center,
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
@@ -196,7 +199,8 @@ class HomeScreen extends StatelessWidget {
         padding: EdgeInsets.all(10),
         height: 100,
         alignment: Alignment.center,
-        decoration: BoxDecoration(color: Colors.blueAccent),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30), color: Colors.blueAccent),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
