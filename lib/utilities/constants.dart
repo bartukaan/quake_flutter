@@ -11,3 +11,7 @@ final kBoxDecorationStyle = BoxDecoration(
     ),
   ],
 );
+
+final kTextStyle = TextStyle(
+
+);

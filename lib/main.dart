@@ -10,7 +10,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Workmanager.initialize(
 
-    // The top level function, aka callbackDispatcher
+      // The top level function, aka callbackDispatcher
       callbackDispatcher,
 
       // If enabled it will post a notification whenever
@@ -48,10 +48,10 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         title: 'Luna Smart Meter',
         theme: ThemeData(
-          // fontFamily: 'Genel',
-          //  primarySwatch: Colors.teal,
-          //  accentColor: Colors.orangeAccent),
-        ),
+            // fontFamily: 'Genel',
+            //  primarySwatch: Colors.teal,
+            //  accentColor: Colors.orangeAccent),
+            ),
         home: HomeScreen());
   }
 
