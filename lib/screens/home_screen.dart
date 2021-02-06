@@ -14,10 +14,10 @@ class HomeScreen extends StatelessWidget {
           flexibleSpace: FlexibleSpaceBar(
             title: Text("Custom Scrollview App"),
             centerTitle: true,
-            background: Image.asset(
-              "assets/images/emre.jpg",
+          /*  background: Image.asset(
+              "assets/images/image.jpg",
               fit: BoxFit.cover,
-            ),
+            ),*/
           ),
         ),
 
@@ -29,30 +29,7 @@ class HomeScreen extends StatelessWidget {
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           delegate: SliverChildListDelegate(sabitListeElemanlari()),
         ),
-               
-
-
-        SliverGrid.count(crossAxisCount: 6, children:
-        sabitListeElemanlari()
-          ,),
-
-        SliverGrid.extent(maxCrossAxisExtent: 300, children: sabitListeElemanlari(),),
-
-        //statik elemanlı bir sliver list view
-        SliverPadding(
-          padding: EdgeInsets.all(4),
-          sliver: SliverList(
-            delegate: SliverChildListDelegate(
-              sabitListeElemanlari(),
-            ),
-          ),
-        ),
-
-
-        //elemanları statik olusturulan ama extent mantıgıyla calısan listview
-        SliverFixedExtentList(
-            delegate: SliverChildListDelegate(sabitListeElemanlari()),
-            itemExtent: 100),
+        
 
 
       ],
