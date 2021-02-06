@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:quake_flutter/screens/quake_bag.dart';
+import 'package:quake_flutter/screens/building_status_screen.dart';
+import 'package:quake_flutter/screens/last_quakes_screen.dart';
+import 'package:quake_flutter/screens/quake_bag_screen.dart';
 import 'package:quake_flutter/utilities/constants.dart';
+
+import 'afet_toplanma_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -16,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             snap: false,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
-                "Depreme Hazırım",
+                'Depreme Hazırım',
                 style: TextStyle(
                     fontStyle: FontStyle.italic,
                     letterSpacing: 2,
@@ -24,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               ),
               centerTitle: true,
               background: Image.asset(
-                "assets/earthquakehome.jpg",
+                'assets/earthquakehome.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -75,129 +79,144 @@ class HomeScreen extends StatelessWidget {
     ];
   }
 
-  Container _buildAfetToplanma(BuildContext context) {
-    return Container(
-      height: 100,
-      decoration: BoxDecoration(
-        color: Colors.green,
-      ),
-      alignment: Alignment.center,
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.supervised_user_circle_sharp,
-            color: Colors.white,
-            size: 64,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Afet Toplanma",
-            style: _gridTextStyle(),
-            textAlign: TextAlign.center,
-          )
-        ],
+   _buildAfetToplanma(BuildContext context) {
+    return InkWell(
+      onTap: (){
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => AfetToplanma()));
+      },
+      child: Container(
+        height: 100,
+        decoration: BoxDecoration(
+          color: Colors.green,
+        ),
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.supervised_user_circle_sharp,
+              color: Colors.white,
+              size: 64,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Afet Toplanma",
+              style: _gridTextStyle(),
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
       ),
     );
   }
 
-  Container _buildBuildingStatus(BuildContext context) {
-    return Container(
-      height: 100,
-      decoration: BoxDecoration(
-        color: Colors.purple,
-      ),
-      alignment: Alignment.center,
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.home,
-            color: Colors.white,
-            size: 64,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Bina Durumu",
-            style: _gridTextStyle(),
-            textAlign: TextAlign.center,
-          )
-        ],
+   _buildBuildingStatus(BuildContext context) {
+    return InkWell(
+      onTap: (){
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => BuildingStatus()));
+      },
+      child: Container(
+        height: 100,
+        decoration: BoxDecoration(
+          color: Colors.purple,
+        ),
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.home,
+              color: Colors.white,
+              size: 64,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Bina Durumu",
+              style: _gridTextStyle(),
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
       ),
     );
   }
 
   _buildLastQuakes(BuildContext context) {
-    return Container(
-      height: 100,
-      decoration: BoxDecoration(color: Colors.redAccent),
-      alignment: Alignment.center,
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.list_alt,
-            color: Colors.white,
-            size: 64,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Son Depremler",
-            style: _gridTextStyle(),
-            textAlign: TextAlign.center,
-          )
-        ],
+    return InkWell(
+      onTap: (){
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => LastQuakes()));
+      },
+      child: Container(
+        height: 100,
+        decoration: BoxDecoration(color: Colors.redAccent),
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.list_alt,
+              color: Colors.white,
+              size: 64,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Son Depremler",
+              style: _gridTextStyle(),
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
       ),
     );
   }
 
   _buildBagRequired(BuildContext context) {
-    return /*InkWell(
+    return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) => QuakeBag()
-        ));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => QuakeBag()));
       },
-
-      child:*/
-        Container(
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
-      height: 100,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(color: Colors.blueAccent),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.shopping_bag,
-            color: Colors.white,
-            size: 64,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Deprem Çantası",
-            style: _gridTextStyle(),
-            textAlign: TextAlign.center,
-          ),
-        ],
+      child: Container(
+        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
+        height: 100,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(color: Colors.blueAccent),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.shopping_bag,
+              color: Colors.white,
+              size: 64,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Deprem Çantası",
+              style: _gridTextStyle(),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
-    //   );
   }
 
   TextStyle _gridTextStyle() => TextStyle(

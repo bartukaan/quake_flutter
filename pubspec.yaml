@@ -30,7 +30,7 @@ dependencies:
   workmanager: ^0.2.3
   pedantic: ^1.9.2
   #google_maps_flutter: ^1.0.10
-  google_maps_flutter: ^1.2.0
+  google_maps_flutter: any
 
 
   # The following adds the Cupertino Icons font to your application.
