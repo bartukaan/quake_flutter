@@ -12,10 +12,17 @@ final kBoxDecorationStyle = BoxDecoration(
     ),
   ],
 );
-
-final kTextStyle = TextStyle(
-
+final kLabelTextStyle = TextStyle(
+  color: Colors.white54,
+  fontFamily: 'OpenSans',
 );
+
+final kLabelStyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+  fontFamily: 'OpenSans',
+);
+
 
 final List<String> categoriesNames = [ 'Gıda', 'Belge Fotokopileri', 'Giyecekler', 'Hijyen Malzemeleri', 'Diğer' ];
 final List<String> belgeFotokopileriCategories = ['Kimlik Kartları', 'Diplomalar', 'Pasaport, Banka Cüzdanı vb.', 'Diğer'];

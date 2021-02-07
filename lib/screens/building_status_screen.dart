@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:quake_flutter/models/building_model.dart';
+import 'package:quake_flutter/utilities/constants.dart';
 
 class BuildingStatus extends StatefulWidget {
   @override
@@ -46,7 +47,7 @@ class _BuildingStatusState extends State<BuildingStatus> {
                     Text(
                         'Barcode Type: ${describeEnum(result.format)}   Data: ${result.code}')
                   else
-                    Text('Scan a code'),
+                    Text('Kod tara'),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -77,16 +78,16 @@ class _BuildingStatusState extends State<BuildingStatus> {
                               builder: (context, snapshot) {
                                 if (snapshot.data != null) {
                                   return Text(
-                                      'Camera facing ${describeEnum(snapshot.data)}');
+                                      'Kamera yönü ${describeEnum(snapshot.data)}');
                                 } else {
-                                  return Text('loading');
+                                  return Text('yükleniyor');
                                 }
                               },
                             )),
                       )
                     ],
                   ),
-                  Row(
+             /*     Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -109,11 +110,18 @@ class _BuildingStatusState extends State<BuildingStatus> {
                         ),
                       )
                     ],
-                  ),
+                  ),*/
                 ],
               ),
             ),
-          )
+          ),
+          Expanded(flex: 6,child:Column(children: [
+            _buildAddressLabel(),
+            _buildMalzemeLabel(),
+            _buildRiskLabel(),
+            _buildHasarLabel(),
+
+          ],) )
         ],
       ),
     );
@@ -158,4 +166,135 @@ class _BuildingStatusState extends State<BuildingStatus> {
     controller?.dispose();
     super.dispose();
   }
+  Widget _buildBuildingTypeLabel() {
+    return Container(
+      decoration: kBoxDecorationStyle,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: TextFormField(
+          textCapitalization: TextCapitalization.words,
+          initialValue: 'Apartman',
+          enabled: false,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'OpenSans',
+          ),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Icon(
+              Icons.location_city,
+              color: Colors.white,
+            ),
+            labelText: 'Bina Tipi',
+            labelStyle: kLabelTextStyle,
+          ),
+        ),
+      ),
+    );
+  }
+  Widget _buildAddressLabel() {
+    return Container(
+      decoration: kBoxDecorationStyle,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: TextFormField(
+          textCapitalization: TextCapitalization.words,
+          initialValue: 'Yeni Girne Caddesi 7465 sokak No:18/2 Karşıyaka/İzmir',
+          enabled: false,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'OpenSans',
+          ),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Icon(
+              Icons.location_city,
+              color: Colors.white,
+            ),
+            labelText: "Address",
+            labelStyle: kLabelTextStyle,
+          ),
+        ),
+      ),
+    );
+  }
+  Widget _buildRiskLabel() {
+    return Container(
+      decoration: kBoxDecorationStyle,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: TextFormField(
+          textCapitalization: TextCapitalization.words,
+          initialValue: '6/10',
+          enabled: false,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'OpenSans',
+          ),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Icon(
+              Icons.location_city,
+              color: Colors.white,
+            ),
+            labelText: "Risk Durumu",
+            labelStyle: kLabelTextStyle,
+          ),
+        ),
+      ),
+    );
+  }
+  Widget _buildHasarLabel() {
+    return Container(
+      decoration: kBoxDecorationStyle,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: TextFormField(
+          textCapitalization: TextCapitalization.words,
+          initialValue: '2/10',
+          enabled: false,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'OpenSans',
+          ),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Icon(
+              Icons.location_city,
+              color: Colors.white,
+            ),
+            labelText: "Hasar Durumu",
+            labelStyle: kLabelTextStyle,
+          ),
+        ),
+      ),
+    );
+  }
+  Widget _buildMalzemeLabel() {
+    return Container(
+      decoration: kBoxDecorationStyle,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: TextFormField(
+          textCapitalization: TextCapitalization.words,
+          initialValue: 'Beton',
+          enabled: false,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'OpenSans',
+          ),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Icon(
+              Icons.location_city,
+              color: Colors.white,
+            ),
+            labelText: "Address",
+            labelStyle: kLabelTextStyle,
+          ),
+        ),
+      ),
+    );
+  }
+
 }
