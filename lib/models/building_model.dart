@@ -11,7 +11,7 @@ String buildingToJson(Building data) => json.encode(data.toJson());
 class Building {
   Building({
     this.sokak,
-    this.ehir,
+    this.sehir,
     this.mahalle,
     this.apartman,
     this.apartmanNo,
@@ -23,7 +23,7 @@ class Building {
   });
 
   String sokak;
-  String ehir;
+  String sehir;
   String mahalle;
   String apartman;
   String apartmanNo;
@@ -35,7 +35,7 @@ class Building {
 
   factory Building.fromJson(Map<String, dynamic> json) => Building(
     sokak: json["sokak"] == null ? null : json["sokak"],
-    ehir: json["şehir"] == null ? null : json["şehir"],
+    sehir: json["şehir"] == null ? null : json["şehir"],
     mahalle: json["mahalle"] == null ? null : json["mahalle"],
     apartman: json["apartman"] == null ? null : json["apartman"],
     apartmanNo: json["apartmanNo"] == null ? null : json["apartmanNo"],
@@ -48,7 +48,7 @@ class Building {
 
   Map<String, dynamic> toJson() => {
     "sokak": sokak == null ? null : sokak,
-    "şehir": ehir == null ? null : ehir,
+    "şehir": sehir == null ? null : sehir,
     "mahalle": mahalle == null ? null : mahalle,
     "apartman": apartman == null ? null : apartman,
     "apartmanNo": apartmanNo == null ? null : apartmanNo,
@@ -58,4 +58,9 @@ class Building {
     "yapiMalzemesi": yapiMalzemesi == null ? null : yapiMalzemesi,
     "hasarDurumu": hasarDurumu == null ? null : hasarDurumu,
   };
+
+  @override
+  String toString() {
+    return 'Building{sokak: $sokak, sehir: $sehir, mahalle: $mahalle, apartman: $apartman, apartmanNo: $apartmanNo, postaKodu: $postaKodu, yapilisYili: $yapilisYili, riskDurumu: $riskDurumu, yapiMalzemesi: $yapiMalzemesi, hasarDurumu: $hasarDurumu}';
+  }
 }
