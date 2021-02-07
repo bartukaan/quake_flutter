@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:quake_flutter/models/building_model.dart';
 
 class BuildingStatus extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class BuildingStatus extends StatefulWidget {
 }
 
 class _BuildingStatusState extends State<BuildingStatus> {
+  Building building = Building();
   Barcode result;
   QRViewController controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
