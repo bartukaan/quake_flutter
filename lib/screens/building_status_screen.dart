@@ -87,7 +87,7 @@ class _BuildingStatusState extends State<BuildingStatus> {
                       )
                     ],
                   ),
-             /*     Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -110,7 +110,7 @@ class _BuildingStatusState extends State<BuildingStatus> {
                         ),
                       )
                     ],
-                  ),*/
+                  ),
                 ],
               ),
             ),
@@ -211,7 +211,7 @@ class _BuildingStatusState extends State<BuildingStatus> {
               Icons.location_city,
               color: Colors.white,
             ),
-            labelText: "Address",
+            labelText: "Adres",
             labelStyle: kLabelTextStyle,
           ),
         ),
@@ -289,7 +289,7 @@ class _BuildingStatusState extends State<BuildingStatus> {
               Icons.location_city,
               color: Colors.white,
             ),
-            labelText: "Address",
+            labelText: "Yapı Malzemesi",
             labelStyle: kLabelTextStyle,
           ),
         ),
